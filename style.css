@@ -1,0 +1,465 @@
+@font-face {
+    font-family: "cascaida";
+    src: url("fonts/Cascadia.ttf") format("truetype");
+
+      }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+} 
+
+a {
+    cursor: none;
+    
+}
+
+button {
+    cursor: none;
+}
+
+html, body {
+    cursor: none;
+    /* animation: turnOn 2s ease-in; */
+}
+
+[data-scroll-section] {
+    min-height: 100vh; /* Each section takes up full viewport height */
+    padding: 50px; /* Optional padding */
+}
+
+.BVid {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -2; 
+    pointer-events: none;
+
+}
+
+.BVid video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none; 
+}
+.custom-cursor {
+    position: fixed;
+    width: 2px; /* Set your desired width */
+    height: 2px; /* Set your desired height */
+    background: black; /* Example color */
+    border-radius: 20%; /* Example: make it circular */
+    pointer-events: none; /* Avoid blocking interactions */
+    z-index: 9999; /* Ensure it appears above other elements */
+    display: none;
+
+}
+
+.site-wide{
+    pointer-events: none;
+    z-index: 9999;
+    width: 5px;
+    height: 5px;
+    border: 2px soild black;
+    box-shadow: 0px 0px 50px 10px rgb(255, 0, 179);
+    mix-blend-mode: hard-light;
+    animation: blink2 .1s infinite linear;
+    transition: width 0.1s ease-in-out, height 0.1s ease-in-out;
+
+}
+
+.site-wide.active {
+    width: 20px;
+    height: 5px;
+    animation: blink2 .1s infinite linear;
+}
+
+a:hover .site-wide {
+    width: 20px;
+    height: 20px;
+}
+
+.home{
+    content: center;
+    width: 20px;
+    height: 20px;
+    background-color: black;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    box-shadow: 0px 0px 10px black;
+    transition: width 1s, height 1s, box-shadow 1s;
+    font-size: 0px;
+}
+
+.home:hover {
+    color: white;
+    animation: blink .8s infinite linear;
+    width: 100px ;
+    font-size: 0px;
+    height: 15px;
+    box-shadow: 0px 0px 50px 2px rgb(255, 0, 179);
+
+}
+
+.bottom{
+    margin-bottom: 25%;
+    margin-top: 25%;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    
+    justify-content: center;    
+}
+
+.mLink {
+    margin: 20px;
+    text-decoration: none;
+    font-family: monospace;
+    font-size: 16px;
+    color: black;
+    text-transform: uppercase;
+    text-shadow: 0px 0px 4px rgb(138, 137, 137);
+    width: 5%;
+    transition: width 1s, font-size 1s;
+    animation-delay: 1s;
+    letter-spacing: 4px;
+
+} 
+
+.mLink:hover {
+    animation: blink .8s infinite linear;
+    width: 100% ;
+    font-size: 20px;
+
+}
+
+.hl {
+    height: 3%;
+    margin-top: 150px ;
+    text-align: center;
+    text-decoration: none;
+    font-family: monospace;
+    font-size: 24px;
+    color: black;
+    text-transform: uppercase;
+    animation: blink .8s infinite linear;
+    letter-spacing: 4px;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    white-space: wrap; /* Keeps the content on a single line */
+
+}   
+
+.hl2 {
+    text-align: center;
+    text-decoration: none;
+    font-family: monospace;
+    font-size: 14px;
+    color: black;
+    letter-spacing: 4px;
+    text-shadow: 0px 0px 4px rgb(138, 137, 137);
+
+}
+
+.hl3 {
+    margin-top: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+    font-family: monospace;
+    font-size: 14px;
+    color: black;
+    letter-spacing: 4px;
+    text-shadow: 0px 0px 4px rgb(138, 137, 137);
+
+}
+
+.hl4 {
+    margin: 15% 30% 40% ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    text-decoration: none;
+    font-family: monospace;
+    font-size: 16px;
+    color: white;
+    background-color: black;    
+    padding: 20px;
+    box-shadow: 0px 0px 500px .1px rgb(255, 0, 179);
+
+}
+
+
+.hl5 {
+    margin: 10px;
+    justify-content: center;
+    text-decoration: none;
+    font-family: monospace;
+    font-size: 14px;
+    color: black;
+    letter-spacing: 4px;
+    text-shadow: 0px 0px 4px rgb(138, 137, 137);
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    white-space: nowrap; /* Keeps the content on a single line */
+    animation: 
+    typing 2s steps(60, end),
+    blink-caret .75s step-end infinite
+
+    
+}
+
+
+.mLink2 {
+    margin: 20px;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    width: 5%;
+    transition: width .3s, font-size .3s;
+    animation-delay: 1s;
+
+} 
+
+.mLink2:hover {
+    animation: blink .8s infinite linear;
+    width: 100% ;
+    font-size: 20px;
+
+}
+
+.txt1 {
+    width: 50%;
+    height: 50%;
+    text-align: left;
+    padding: 10% 10% 0%;
+    margin-bottom: 10px ;
+    text-decoration: none;
+    font-family: monospace;
+    font-size: 14px;
+    color: black;
+    letter-spacing: 4px;
+    text-shadow: 0px 0px 4px rgb(138, 137, 137); 
+}
+
+.container1{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20%;
+    margin-top: 40%;
+    flex: 0%;
+}
+
+.container2{
+    
+    margin: 20%;
+    margin-top: 20%;
+    flex: 0%;
+    
+}
+
+.imgR {
+    float: right;
+    margin: 0px;
+    width: 50%;
+    height: 50%;
+    box-shadow: -100px 0px 200px  rgb(170, 170, 170);
+    transition: transform 1s ease-in-out, box-shadow 5s ease-in-out; 
+}
+
+
+.imgL {
+    float: left;
+    margin: 0px;
+    width: 50%;
+    height: 50%;
+    box-shadow: 100px 0px 200px  rgb(170, 170, 170);
+    transition: transform 1s ease-in-out, box-shadow 5s ease-in-out; 
+
+}
+
+.imgR:hover {
+    transform: scale(1.2); /* Increase size */
+    z-index: 10; /* Ensure it stays above other elements */
+    box-shadow: 50px 0px 100px  rgb(255, 0, 179);
+}
+
+.imgL:hover {
+    transform: scale(1.2); /* Increase size */
+
+    z-index: 10; /* Ensure it stays above other elements */
+    box-shadow: -50px 0px 100px  rgb(255, 0, 179);
+}
+.imgL {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 50%; /* Adjust width */
+    height: 50%; /* Set height for images */
+    overflow: hidden; /* Hide overflow to prevent scrolling */
+    box-shadow: 100px 0px 200px rgb(170, 170, 170);
+}
+
+.imgR {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 50%; /* Adjust width */
+    height: 50%; /* Set height for images */
+    overflow: hidden; /* Hide overflow to prevent scrolling */
+    box-shadow: 100px 0px 200px rgb(170, 170, 170);
+}
+
+
+.scroll-container {
+    display: flex; /* Align images horizontally */
+    transition: transform 0.5s ease-in-out; /* Smooth slide animation */
+}
+
+.scroll-container img,
+.scroll-container video {
+    scroll-snap-align: center; /* Align each item in the center */
+    flex-shrink: 0; /* Prevent items from shrinking */
+    width: 100%; /* Ensure content fits container width */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure uniform scaling */
+   
+}
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 24px;
+    z-index: 10;
+    padding: 10px;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease; /* Smooth fade-in/out */
+
+}
+
+.arrow:hover {
+    background-color: white;
+    color: black;
+
+
+}
+
+.imgL:hover .arrow {
+    opacity: 1; /* Show arrows when hovering over the container */
+}
+
+.arrow.left {
+    left: 0;
+}
+
+.arrow.right {
+    right: 0;
+}
+
+.arrow:hover {
+    background-color: rgba(0, 0, 0, 0.);
+}
+
+
+.imgR img{
+    z-index: -1;
+}
+
+.dlb {
+
+    text-align: center;
+    margin: 10%;
+    margin-bottom: 10px ;
+    text-decoration: none;
+    font-family: monospace;
+    font-size: 14px;
+    color: black;
+    letter-spacing: 4px;
+    background-color: white;
+    text-shadow: 0px 0px 4px rgb(138, 137, 137); 
+    transition: 1s;
+}
+
+
+.dlb2 {
+
+    text-align: center;
+    margin: 0%;
+    margin-bottom: 10px ;
+    text-decoration: none;
+    font-family: monospace;
+    font-size: 14px;
+    color: black;
+    letter-spacing: 4px;
+    background-color: white;
+    text-shadow: 0px 0px 4px rgb(138, 137, 137); 
+    transition: 1s;
+    
+}
+
+.dlb:hover {
+    animation: blink .5s infinite;
+    font-size: 16px;
+}
+
+.dlb2:hover {
+    animation: blink .5s infinite;
+    
+}
+
+
+@keyframes blink{
+    0%{
+        color: white;
+        background-color: black;
+    }
+    100% {
+      
+      color: black;
+    }
+  }
+
+@keyframes blink2{
+    0%{
+        border-color: white;
+        background-color: black;
+    }
+    100% {
+      
+      border-color: black;
+    }
+  }
+
+  @keyframes turnOn {
+    0%{
+        opacity: 0%;
+    }
+    100%{
+        opacity: 100%;
+    }
+    
+  }
+
+  /* The typing effect */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: black; }
+  }
