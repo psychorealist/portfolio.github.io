@@ -147,7 +147,7 @@ a:hover .site-wide {
     font-size: 16px;
     color: black;
     text-transform: uppercase;
-    text-shadow: 0px 0px 4px rgb(138, 137, 137);
+    /* text-shadow: 0px 0px 4px rgb(138, 137, 137); */
     width: 5%;
     transition: width 1s, font-size 1s;
     animation-delay: 1s;
@@ -185,7 +185,7 @@ a:hover .site-wide {
     font-size: 14px;
     color: black;
     letter-spacing: 4px;
-    text-shadow: 0px 0px 4px rgb(138, 137, 137);
+    /* text-shadow: 0px 0px 4px rgb(138, 137, 137); */
 
 }
 
@@ -200,7 +200,7 @@ a:hover .site-wide {
     font-size: 18px;
     color: black;
     letter-spacing: 4px;
-    text-shadow: 0px 0px 4px rgb(138, 137, 137);
+    /* text-shadow: 0px 0px 4px rgb(138, 137, 137); */
 
 }
 
@@ -269,8 +269,8 @@ a:hover .site-wide {
     font-size: 16px;
     color: black;
     letter-spacing: 4px;
-    text-shadow: 0px 0px 4px rgb(138, 137, 137); 
-    line-height: 150%;
+    /* text-shadow: 0px 0px 4px rgb(138, 137, 137);  */
+    letter-spacing: 0;
 }
 
 .container1{
@@ -496,6 +496,9 @@ a:hover .site-wide {
         width: 100%;
         height: auto;
         padding: 5% 5% 0%;
+        font-size: 12px;
+        line-height: 100%;
+        letter-spacing: 0;
     }
 
     .container1, .container2 {
@@ -519,7 +522,8 @@ a:hover .site-wide {
     }
     .hl2
     {
-        font-size: 16px;
+        font-size: 12px;
+        margin: 5% 10% 0%;
        
     }
     .mLink2 {
@@ -528,4 +532,9 @@ a:hover .site-wide {
         width: 100%;
         letter-spacing: 0;
     }
+    .imgL:hover,
+.imgR:hover {
+    transform: none !important;
+    box-shadow: none !important;
+}
 }
