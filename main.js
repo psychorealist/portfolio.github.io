@@ -17,6 +17,8 @@ document.addEventListener('mousemove', TrackCursor);
 document.addEventListener('mousedown', () => site_wide_cursor.classList.add('active'));
 document.addEventListener('mouseup', () => site_wide_cursor.classList.remove('active'));
 
+
+
 function TrackCursor(evt) {
     const cursorWidth = site_wide_cursor.offsetWidth;
     const cursorHeight = site_wide_cursor.offsetHeight;
@@ -71,6 +73,52 @@ function handleVideoPlayback() {
             video.pause(); // Pause video when out of view
         }
     });
-}
+}  
+
+
 
 window.addEventListener('scroll', handleVideoPlayback);
+
+
+// Add this to main.js
+
+// Replace '.imgL' and '.imgR' with your slider container selector if needed
+const swipeContainers = document.querySelectorAll('.imgL, .imgR');
+
+swipeContainers.forEach(container => {
+    let startX = 0;
+    let endX = 0;
+
+    container.addEventListener('touchstart', function(e) {
+        startX = e.touches[0].clientX;
+    });
+
+    container.addEventListener('touchmove', function(e) {
+        endX = e.touches[0].clientX;
+    });
+
+    container.addEventListener('touchend', function() {
+        if (startX - endX > 50) {
+            // Swiped left
+            // Call your "next photo" function here
+            goToNextPhoto(); // Replace with your actual function
+        } else if (endX - startX > 50) {
+            // Swiped right
+            // Call your "previous photo" function here
+            goToPreviousPhoto(); // Replace with your actual function
+        }
+        // Reset
+        startX = 0;
+        endX = 0;
+    });
+});
+
+// Example functions (replace with your real ones)
+function goToNextPhoto() {
+    // Your code to go to the next photo
+    document.querySelector('.arrow.right')?.click();
+}
+function goToPreviousPhoto() {
+    // Your code to go to the previous photo
+    document.querySelector('.arrow.left')?.click();
+}
