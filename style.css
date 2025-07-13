@@ -23,6 +23,8 @@ button {
 html, body {
     cursor: none;
     /* animation: turnOn 2s ease-in; */
+    overflow-y: auto !important;
+    height: auto !important;
 }
 
 [data-scroll-section] {
@@ -136,7 +138,7 @@ a:hover .site-wide {
 .menu {
     display: flex;
     flex-direction: row;
-    
+    text-align: center;
     justify-content: center;    
 }
 
@@ -148,7 +150,7 @@ a:hover .site-wide {
     color: black;
     text-transform: uppercase;
     /* text-shadow: 0px 0px 4px rgb(138, 137, 137); */
-    width: 5%;
+    width: 20%;
     transition: width 1s, font-size 1s;
     animation-delay: 1s;
     letter-spacing: 4px;
@@ -537,4 +539,14 @@ a:hover .site-wide {
     transform: none !important;
     box-shadow: none !important;
 }
+    .mLink {
+        font-size: 14px;
+        width: 100%;
+        margin: 3%;
+
+    }
+    .menu {
+        flex-direction: column;
+        align-items: center;
+    }
 }
