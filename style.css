@@ -546,7 +546,21 @@ a:hover .site-wide {
 
     }
     .menu {
+        margin-top: 15%;
         flex-direction: column;
         align-items: center;
+        
+    }
+    .hl3{
+        margin-bottom: 50%;
+    }
+    .hl5,
+    .dlb2 {
+      word-break: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    max-width: 100%;
+    font-size: 12px;
+    letter-spacing: 0;  
     }
 }
